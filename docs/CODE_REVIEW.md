@@ -14,12 +14,12 @@ Scope: `src/__init__.py`, `src/ui.py`, `src/risk.py`, `tests/test_risk.py`, `bui
 
 ## Open constraints / external validation needed
 
-1. **High / not yet tested**: actual runtime installation and GUI behavior on a live calibre 8.x installation (macOS initially, ideally also Windows and Linux). Static syntax/tests do not replace this.
+1. **Runtime validation**: the project owner has installed and used the updater successfully in calibre on macOS. That is a live user test, not just static validation. Windows, Linux, and unusual failure/rollback scenarios remain outside the reported test scope.
 2. **High / inherent**: third-party plugin code executes during installation. A deterministic ZIP structure scan is not a malware detector or sandbox.
 3. **Medium / inherent**: previously loaded code can remain active until restart; rollback of ZIP does not undo plugin-defined external side effects or data migrations.
 4. **Medium / inherent**: a forced process kill or OS crash can leave temporary staged archives; ordinary completion/cancellation cleans them.
 5. **Low**: success-run backups default to deletion to avoid residue, so easy rollback of a post-restart regression requires opting into retention first.
-6. **Medium**: catalogue update and installer APIs are version-dependent; test against a live installed calibre before making a stable release.
+6. **Medium**: catalogue update and installer APIs are version-dependent. The reported macOS test establishes working behavior in that installation, not guaranteed compatibility with other calibre versions or platforms.
 
 ## Tests
 
@@ -28,3 +28,5 @@ Scope: `src/__init__.py`, `src/ui.py`, `src/risk.py`, `tests/test_risk.py`, `bui
 - Build ZIP names / CRC integrity check.
 
 The separate ChatGPT Code Review connector was not available among callable tools when this audit was prepared. This report is a manually conducted source review and must not be presented as a completed external Code Review pass.
+
+**Live testing update (19 October 2026):** The project owner confirmed the updater operates in a running calibre installation on macOS. This confirmation postdates the initial source review and does not imply that failure recovery, other platforms, or every calibre version was exercised.
