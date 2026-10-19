@@ -2,9 +2,11 @@
 
 **Review and update several calibre plugins in one session—without repeatedly opening the plugin manager.**
 
+![Bulk Plugin Updater toolbar icon](src/images/icon.png)
+
 Bulk Plugin Updater is a free, **unofficial** calibre add-on. It lists available updates for your installed third-party plugins, checks each download against a fixed set of safety and compatibility rules, installs the updates **one at a time**, and asks whether you want to restart calibre when it finishes.
 
-> **Status: beta (v0.1.0-beta.1).** The source and automated checks are available, but loading and updating plugins in a running calibre installation have **not yet been tested**. Please back up your calibre configuration before using this on an important library.
+> **Status: beta (v0.1.1-beta.1).** The source and automated checks are available, but loading and updating plugins in a running calibre installation have **not yet been tested**. Please back up your calibre configuration before using this on an important library.
 
 ## What it does
 
@@ -21,11 +23,11 @@ It **does not** update calibre itself, built-in plugins, or plugins that are abs
 
 Requires **calibre 8.0 or newer** and an internet connection.
 
-1. Download the **installable plugin ZIP**: [Bulk_Plugin_Updater-v0.1.0-beta.1.zip](downloads/Bulk_Plugin_Updater-v0.1.0-beta.1.zip). **Do not extract it.** GitHub's green **Code → Download ZIP** is *source code*, not an installable calibre plugin.
+1. Download the **installable plugin ZIP**: [Bulk_Plugin_Updater-v0.1.1-beta.1.zip](downloads/Bulk_Plugin_Updater-v0.1.1-beta.1.zip). **Do not extract it.** GitHub's green **Code → Download ZIP** is *source code*, not an installable calibre plugin.
 2. In calibre, open **Preferences → Plugins → Load plugin from file**.
 3. Choose the downloaded ZIP. Confirm calibre's warning about installing third-party code only if you trust the source.
 4. Restart calibre to load the new interface action.
-5. Look for **Bulk plugin updates**. If it is not visible, go to **Preferences → Toolbars & menus**, add the action to a toolbar or menu, then restart if calibre requests it.
+5. Look for **Bulk plugin updates**, now with a book-and-refresh icon. If it is not visible, go to **Preferences → Toolbars & menus**, add the action to a toolbar or menu, then restart if calibre requests it.
 
 ### Update your plugins
 

@@ -556,6 +556,8 @@ class BulkPluginUpdaterAction(InterfaceAction):
     action_spec = ('Bulk plugin updates', None, 'Review and update multiple calibre plugins safely', None)
 
     def genesis(self):
+        # calibre provides get_icons() for resources bundled in the plugin ZIP.
+        self.qaction.setIcon(get_icons('images/icon.png', 'Bulk Plugin Updater'))
         self.qaction.triggered.connect(self.show_updater)
         self._dialog = None
 

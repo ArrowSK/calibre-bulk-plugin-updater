@@ -5,8 +5,8 @@ import hashlib
 
 HERE = Path(__file__).resolve().parent
 SRC = HERE / 'src'
-OUT = HERE / 'dist' / 'Bulk_Plugin_Updater-v0.1.0-beta.1.zip'
-FILES = ('__init__.py', 'ui.py', 'risk.py', 'plugin-import-name-bulk_plugin_updater.txt')
+OUT = HERE / 'dist' / 'Bulk_Plugin_Updater-v0.1.1-beta.1.zip'
+FILES = ('__init__.py', 'ui.py', 'risk.py', 'plugin-import-name-bulk_plugin_updater.txt', 'images/icon.png')
 
 
 def main():

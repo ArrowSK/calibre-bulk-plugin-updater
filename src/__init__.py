@@ -7,6 +7,6 @@ class BulkPluginUpdater(InterfaceActionBase):
     description = 'Review, preflight and sequentially update installed calibre plugins.'
     supported_platforms = ['windows', 'osx', 'linux']
     author = 'ArrowSK'
-    version = (0, 1, 0)
+    version = (0, 1, 1)
     minimum_calibre_version = (8, 0, 0)
     actual_plugin = 'calibre_plugins.bulk_plugin_updater.ui:BulkPluginUpdaterAction'
