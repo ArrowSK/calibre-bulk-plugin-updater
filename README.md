@@ -6,7 +6,7 @@
 
 Bulk Plugin Updater is a free, **unofficial** calibre add-on. It lists available updates for your installed third-party plugins, checks each download against a fixed set of safety and compatibility rules, installs the updates **one at a time**, and asks whether you want to restart calibre when it finishes.
 
-> **Status: beta (v0.1.1-beta.1).** The source and automated checks are available, but loading and updating plugins in a running calibre installation have **not yet been tested**. Please back up your calibre configuration before using this on an important library.
+> **Status: beta (v0.1.1-beta.1).** The project owner has successfully installed and used Bulk Plugin Updater in a running calibre installation on macOS. Automated tests and packaging checks also pass. As with any plugin manager, backing up calibre's configuration before a large update is recommended.
 
 ## What it does
 
@@ -75,7 +75,7 @@ The updater creates **no background daemon, scheduled job, telemetry collection,
 - If an update requires **uninstalling another plugin**, this updater blocks it instead of removing anything automatically.
 - A plugin's final behavior cannot be verified until calibre restarts.
 - Removing successful-run backups by default saves disk space, but means you **cannot easily undo a regression discovered later**. Enable backup retention before installing if that risk matters.
-- This beta uses some calibre internals and still needs a live GUI smoke test on calibre 8.x and later versions.
+- The plugin has been used successfully with calibre on macOS. Windows/Linux compatibility and exceptional failure/rollback paths have not been independently verified; some calibre APIs are version-dependent.
 
 ## For contributors
 
@@ -88,7 +88,7 @@ python -m unittest discover -s tests -v
 python build.py
 ```
 
-The build script creates the **installable** ZIP in `dist/`. GitHub's source ZIP is **not** interchangeable with it. CI performs static tests and packaging checks, not a live calibre GUI run.
+The build script creates the **installable** ZIP in `dist/`. GitHub's source ZIP is **not** interchangeable with it. CI covers automated tests and packaging; the project owner has separately confirmed live operation in calibre on macOS.
 
 This project is not affiliated with or endorsed by calibre or its maintainers. Plugin authors and catalogue listings remain responsible for their own updates.
 
